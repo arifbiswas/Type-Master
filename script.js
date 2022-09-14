@@ -130,7 +130,7 @@ const start = () => {
 
 // START Countdown
 // console.log(startBtn);
-// startBtn.addEventListener("click", start());
+startBtn.addEventListener("click", start);
 
 // If history exists, show it
 displayHistory();
