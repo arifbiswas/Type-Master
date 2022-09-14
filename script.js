@@ -16,12 +16,13 @@ fetch("./texts.json")
   .then((res) => res.json())
   .then((data) => {
     questionText = data[Math.floor(Math.random() * data.length)];
-    question.innerHTML = questionText;
+    question.innerText = questionText.length < 70 ? questionText :questionText.substring(0,70);
   });
 
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
   const newLetter = e.key;
+  // console.log(e.key);
 
   // Handle backspace press
   if (newLetter == "Backspace") {
@@ -35,12 +36,15 @@ const typeController = (e) => {
 
   // if it is not a valid character like Control/Alt then skip displaying anything
   if (!validLetters.includes(newLetter)) {
+    // console.log(validLetters);
     return;
   }
 
   userText += newLetter;
+  // console.log(userText);
 
   const newLetterCorrect = validate(newLetter);
+  console.log(newLetterCorrect);
 
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
