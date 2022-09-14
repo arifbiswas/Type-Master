@@ -16,7 +16,7 @@ fetch("./texts.json")
   .then((res) => res.json())
   .then((data) => {
     questionText = data[Math.floor(Math.random() * data.length)];
-    question.innerText = questionText.length < 70 ? questionText :questionText.substring(0,70);
+    question.innerText = questionText;
   });
 
 // checks the user typed character and displays accordingly
@@ -106,7 +106,7 @@ const closeModal = () => {
 
 const start = () => {
   // If already started, do not start again
-  // if (startTime) return;
+  if (startTime) return;
 
   let count = 3;
   countdownOverlay.style.display = "flex";
@@ -130,7 +130,7 @@ const start = () => {
 
 // START Countdown
 // console.log(startBtn);
-startBtn.addEventListener("click", start());
+// startBtn.addEventListener("click", start());
 
 // If history exists, show it
 displayHistory();
