@@ -98,10 +98,41 @@ body {
   display: none;
 
 }
+#header-container{
+  width: 70%;
+  margin: 0 auto;
+}
 .title {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   color: white;
   margin: 20px 0;
+}
+.header-button{
+  display: flex;
+  gap: 10px;
+}
+.header-button>a{
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid #9dffad;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+
+}
+.header-button>a:hover{
+  cursor: pointer;
+  text-decoration: none;
+  color: #9dffad;
+  padding: 10px 20px;
+  border: 1px solid #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+
 }
 
 .divider-container {
