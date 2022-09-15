@@ -31,10 +31,15 @@ function displayHistory() {
 
     newRow.innerHTML = `
   <h3>${test.questionText}</h3>
-  <p>You took: <span class="bold">${test.timeTaken}</span> seconds</p>
+  <p>You took: <span class="bold">${Math.round(test.timeTaken)} </span> seconds</p>
     <p>You made <span class="bold red">${test.errorCount}</span> mistakes</p>
   `;
 
     histories.appendChild(newRow);
   });
+  
 }
+document.getElementById('clear-section').addEventListener('click',function(){
+  localStorage.clear('testHistory');
+  displayHistory();
+})

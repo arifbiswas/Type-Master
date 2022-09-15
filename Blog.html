@@ -28,7 +28,7 @@
       </div>
       <div class="QnA-card">
         <h1>QnA: Difference Global scope and block scope?</h1>
-        <p>Answer: Global variables can be accessed from anywhere in a JavaScript program. Variables declared with var , let and const are quite similar when declared outside a block. They all have Global Scope.Block scope restricts the variable that is declared inside a specific block, from access by the outside of the block. The let & const keyword facilitates the variables to be block scoped. In order to access the variables of that specific block, we need to create an object for it.</p>
+        <p>Answer: Global variables can be accessed from anywhere in a JavaScript program. Variables declared with var , let and const are quite similar when declared outside a block. They all have Global Scope.Block scope restricts the variable that is declared inside a specific block, from access by the outside of the block. The let & const keyword facilitates the variables to be block scoped.</p>
       </div>
       <div class="QnA-card">
         <h1>QnA: What is event loop in JavaScript?</h1>
@@ -43,24 +43,19 @@
           If the Call Stack is empty, it will take the first event from the
           Callback queue and will push it to the Call Stack, which effectively runs it. 
           
-          Such an iteration is called a tick in the Event Loop. 
-          Each event is just a function callback.
-          
-          Easiest explanation : 
-          When any Asynchronous event occur such as setTimeOut or promises... 
-          Then these task takes some time to complete I/O if they have any. 
-          If they completed their I/O or don't have any, then they simply put into 
-          message queue or callback queue. Then event loop will firstly execute the 
-          call stack tasks and then look for callback or message queue and then execute it.</p>
+          </p>
       </div>
       <div class="QnA-card">
         <h1>QnA: How many Undefined?</h1>
-        <p>Answer: Undefined,<br> let b; <br> console.log(typeof a);</p>
+        <p>Answer: Unassigned variables are initialized by JavaScript with a default value of undefined. Here as the variable is declared but not assigned to any value, the variable by default is assigned a value of undefined. <br>
+          Undefined,<br> let b; <br> console.log(typeof b);<br>function a(){a=a+10}; console.log(a()); <br>window.undefined <br>
+       
+        </p>
       </div>
       
     </main>
-
+<!-- 
     <script src="./history.js"></script>
-    <script src="./script.js"></script>
+    <script src="./script.js"></script> -->
   </body>
 </html>
